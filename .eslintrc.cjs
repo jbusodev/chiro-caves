@@ -10,12 +10,5 @@ module.exports = {
   },
   extends: ["@nuxtjs/eslint-config-typescript", "plugin:prettier/recommended"],
   plugins: [],
-  ignorePatterns: [
-    "!.eslintrc.*js",
-    "!.prettierrc.js",
-    "!.nuxt",
-    "dist",
-    "node_modules",
-  ],
   rules: {},
 };

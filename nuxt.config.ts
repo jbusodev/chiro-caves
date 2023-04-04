@@ -1,3 +1,10 @@
 export default defineNuxtConfig({
-  // My Nuxt config
+  modules: ["@nuxtjs/tailwindcss"],
+  css: ["@/assets/css/main.css"],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 });
