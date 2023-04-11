@@ -208,7 +208,7 @@
         </div>
       </section>
       <section id="contact">
-        <Contact />
+        <!-- <Contact /> -->
       </section>
     </main>
     <footer class="bg-gradient-to-r from-gray-100 via-primary-500 to-gray-100">
