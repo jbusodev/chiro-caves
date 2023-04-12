@@ -208,7 +208,7 @@
         </div>
       </section>
       <section id="contact">
-        <!-- <Contact /> -->
+        <Contact />
       </section>
     </main>
     <footer class="bg-gradient-to-r from-gray-100 via-primary-500 to-gray-100">
@@ -327,21 +327,21 @@ const teamMembers = [
     name: "Jean Dupont",
     role: "Directeur",
     bio: "Jean est le fondateur de notre cabinet et apporte une vaste expérience en droit des affaires.",
-    image: "assets/team_member1.jpg",
+    image: "assets/img/team_member1.jpg",
   },
   {
     id: 2,
     name: "Marie Martin",
     role: "Avocate",
     bio: "Marie est spécialisée en droit de la famille et possède une grande expertise dans les divorces litigieux.",
-    image: "assets/team_member2.jpg",
+    image: "assets/img/team_member2.jpg",
   },
   {
     id: 3,
     name: "Pierre Lefebvre",
     role: "Notaire",
     bio: "Pierre est spécialisé en droit immobilier et offre des services de notariat de haute qualité.",
-    image: "assets/team_member3.jpg",
+    image: "assets/img/team_member3.jpg",
   },
   // Add more team members here
 ];
