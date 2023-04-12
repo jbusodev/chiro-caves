@@ -1,18 +1,16 @@
 <template>
   <div class="min-h-screen">
     <div class="flex items-center container mx-auto">
-      <div class="max-w-md mx-auto static max-md:absolute">
+      <div class="max-w-md mx-auto static max-md:absolute z-0">
         <!-- iframe google map -->
         <div class="">Emplacement carte</div>
       </div>
       <!-- Form Contact -->
-      <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+      <div
+        class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm z-10"
+      >
         <div class="text-center">
-          <h1
-            class="my-3 text-3xl font-semibold text-gray-700 "
-          >
-            Contact
-          </h1>
+          <h1 class="my-3 text-3xl font-semibold text-gray-700">Contact</h1>
           <p class="text-gray-400 dark:text-gray-400">
             Remplissez les champs ci-dessous pour nous envoyer un message.
           </p>
