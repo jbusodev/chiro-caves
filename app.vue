@@ -325,23 +325,23 @@ const teamMembers = [
   {
     id: 1,
     name: "Jean Dupont",
-    role: "Directeur",
-    bio: "Jean est le fondateur de notre cabinet et apporte une vaste expérience en droit des affaires.",
-    image: "assets/img/team_member1.jpg",
+    role: "Directeur & Chiropraticien",
+    bio: "Jean est le fondateur de notre cabinet et...",
+    image: "public/img/team_member1.jpg",
   },
   {
     id: 2,
-    name: "Marie Martin",
-    role: "Avocate",
-    bio: "Marie est spécialisée en droit de la famille et possède une grande expertise dans les divorces litigieux.",
-    image: "assets/img/team_member2.jpg",
+    name: "Jacques Martin",
+    role: "Chiropraticien",
+    bio: "Jacques est spécialisé en...",
+    image: "public/img/team_member2.jpg",
   },
   {
     id: 3,
     name: "Pierre Lefebvre",
-    role: "Notaire",
-    bio: "Pierre est spécialisé en droit immobilier et offre des services de notariat de haute qualité.",
-    image: "assets/img/team_member3.jpg",
+    role: "Chiropraticien",
+    bio: "Pierre est spécialisé en...",
+    image: "public/img/team_member3.jpg",
   },
   // Add more team members here
 ];
