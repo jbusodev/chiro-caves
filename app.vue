@@ -194,7 +194,7 @@
               class="bg-white rounded-lg shadow-md overflow-hidden"
             >
               <img
-                class="h-48 w-full object-cover"
+                class="h-80 w-full object-cover object-top"
                 :src="teamMember.image"
                 :alt="teamMember.name"
               />
@@ -327,21 +327,21 @@ const teamMembers = [
     name: "Jean Dupont",
     role: "Directeur & Chiropraticien",
     bio: "Jean est le fondateur de notre cabinet et...",
-    image: "public/img/team_member1.jpg",
+    image: "/img/team_member1.jpg",
   },
   {
     id: 2,
     name: "Jacques Martin",
     role: "Chiropraticien",
     bio: "Jacques est spécialisé en...",
-    image: "public/img/team_member2.jpg",
+    image: "/img/team_member2.jpg",
   },
   {
     id: 3,
     name: "Pierre Lefebvre",
     role: "Chiropraticien",
     bio: "Pierre est spécialisé en...",
-    image: "public/img/team_member3.jpg",
+    image: "/img/team_member3.jpg",
   },
   // Add more team members here
 ];
