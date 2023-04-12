@@ -1,12 +1,12 @@
 <template>
   <header class="bg-white shadow py-6">
-    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex flex-wrap md:flex-nowrap items-center justify-between">
         <div class="md:w-full">
           <a href="">
             <img
-              class="h-8 w-auto text-white-500"
-              src="assets/logo.png"
+              class="max-[400px]:h-20 lg:h-32 md:h-24 max-h-32 w-auto text-white-500"
+              src="../assets/logo.png"
               alt="Cabinet Caves du Palais"
             />
           </a>
