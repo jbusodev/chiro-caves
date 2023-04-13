@@ -112,62 +112,60 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      form: {
-        access_key: "3e441c11-5e3e-4b1c-b75a-809b4ee8eadf",
-        subject: "New Submission from Web3Forms",
+<!-- Let's test that fkr! -->
+<script setup lang="ts">
+const form = {
+  access_key: "3e441c11-5e3e-4b1c-b75a-809b4ee8eadf",
+  subject: "Web3Forms - ChiroCaves",
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+};
 
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      },
-      result: "",
-      status: "",
-    };
-  },
-  methods: {
-    async submitForm() {
-      this.result = "Please wait...";
-      axios.create({
-        headers: { "Content-Type": "application/json" },
-      });
-      await axios
-        .post("https://api.web3forms.com/submit", this.form)
-        .then(async (response) => {
-          const json = await response.json();
-          this.result = json.message;
-          console.log(response);
-          this.result = response.data.message;
+let result = "";
+let status = "";
 
-          if (response.status === 200) {
-            this.status = "success";
-          } else {
-            console.log(response);
-            this.status = "error";
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-          this.status = "error";
-          this.result = "Something went wrong!";
-        })
-        .then(() => {
-          const form = this.form;
-          form.name = "";
-          form.email = "";
-          form.phone = "";
-          form.message = "";
+interface ResponseData {
+  status: number;
+  data: { message: string };
+}
 
-          setTimeout(() => {
-            this.result = "";
-            this.status = "";
-          }, 5000);
-        });
-    },
-  },
+const submitForm = async () => {
+  result = "Veuillez Patienter...";
+
+  try {
+    const response = await useFetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    const responseData = response.data as unknown as ResponseData; // Explicit type assertion - unknown is to account for _AsyncData from useFetch.
+
+    console.log(responseData);
+    result = responseData.data.message;
+
+    if (responseData.status === 200) {
+      status = "success";
+    } else {
+      console.log(responseData);
+      status = "error";
+    }
+  } catch (error) {
+    console.log(error);
+    status = "error";
+    result = "Something went wrong!";
+  } finally {
+    form.name = "";
+    form.email = "";
+    form.phone = "";
+    form.message = "";
+
+    setTimeout(() => {
+      result = "";
+      status = "";
+    }, 5000);
+  }
 };
 </script>
